@@ -1,3 +1,4 @@
 dist/
 simple_localization.egg-info
 __pycache__/
+html/
