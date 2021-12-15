@@ -34,3 +34,13 @@ It's as simple as that !
 localization['GREETINGS']
 >>> Hello !
 ```
+
+You can change the language of an already existing LocalizationManager object using `change_language`:
+
+```python
+localization['GREETINGS']
+>>> Hello !
+localization.change_language("fr_FR")
+localization['GREETINGS']
+>>> Bonjour !
+```

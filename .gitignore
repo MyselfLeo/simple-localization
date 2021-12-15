@@ -1,2 +1,3 @@
 dist/
-src/simple_localization.egg-info/
+simple_localization_myselfleo.egg-info
+__pycache__/
