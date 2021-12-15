@@ -3,6 +3,8 @@ import json
 
 class LocalizationManager:
     '''Class managing localization.
+
+    Access to the localization data is done through the [] operator (e.g. localization["key"]).
     
     Attributes:
         folder_path (str): Path to the folder containing the localization files.
@@ -11,8 +13,6 @@ class LocalizationManager:
 
     Methods:
         change_language(language: str) -> None: Update the data for specified language.
-
-    Access to the localization data is done through the [] operator (e.g. localization["key"]).
     '''
 
     def __init__(self, folder_path: str, language: str) -> None:
@@ -75,8 +75,14 @@ class LocalizationManager:
     def __getitem__(self, key: str) -> str:
         '''Get the localized string for the specified key.
         
+        Example:
+            localization["key"] -> "Localized string"
+
         Args:
             key (str): Key to the localized string.
+
+        Returns:
+            str: The localized string from the json file.
         '''
         return self._data[key]
 
