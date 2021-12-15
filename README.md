@@ -1,0 +1,1 @@
+Simple localization package.
