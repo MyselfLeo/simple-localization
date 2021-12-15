@@ -1,4 +1,4 @@
-# Simple localization package.
+# Simple localization package for Python
 
 ## Setup:
 1. Create a localization folder wherever you want in your project.
