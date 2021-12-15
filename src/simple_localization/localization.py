@@ -74,9 +74,6 @@ class LocalizationManager:
 
     def __getitem__(self, key: str) -> str:
         '''Get the localized string for the specified key.
-        
-        Example:
-            localization["key"] -> "Localized string"
 
         Args:
             key (str): Key to the localized string.
