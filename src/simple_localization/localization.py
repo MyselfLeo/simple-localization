@@ -90,7 +90,7 @@ class LocalizationManager:
 
     def change_language(self, language: str) -> None:
         '''Update the data for specified language.
-        
+
         Args:
             language (str): Language to load. Should be the name of the file without the extension. (e.g. "en_EN" for the file "en_EN.json")
         '''
