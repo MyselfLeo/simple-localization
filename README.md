@@ -1,19 +1,19 @@
-### Simple localization package.
+# Simple localization package.
 
 ## Setup:
 1. Create a localization folder wherever you want in your project.
 2. Add localization files inside. This package use `.json` files.
 
-    # Example:
+    ### Example:
 
-    # (localization/en_EN.json)
+    ### (localization/en_EN.json)
     ```json
     {
         "GREETINGS": "Hello !",
         "GOODBYE": "Goodbye !"
     }
     ```
-    # (localization/fr_FR.json)
+    ### (localization/fr_FR.json)
     ```json
     {
         "GREETINGS": "Bonjour !",
