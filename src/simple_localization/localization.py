@@ -10,15 +10,12 @@ class LocalizationManager:
         folder_path (str): Path to the folder containing the localization files.
         available_languages (list[str]): List of available languages. Loaded when calling load().
         language (str): Current language.
-
-    Methods:
-        change_language(language: str) -> None: Update the data for specified language.
     '''
 
     def __init__(self, folder_path: str, language: str) -> None:
         self.folder_path = folder_path
         self.available_languages = []
-        self.language = language 
+        self.language = language
 
         self._data = {} # Parsed localization file
 
@@ -36,19 +33,6 @@ class LocalizationManager:
         for file in os.listdir(self.folder_path):
             if file.endswith(".json"):
                 self.available_languages.append(file[:-5])
-
-
-
-    def _load(self) -> None:
-        '''Load localization files from specified folder.
-        
-        Called when updating the language.
-        '''
-
-        # Load the localization file
-        self._data = {}
-        with open(f"{self.folder_path}/{self.language}.json", "r") as file:
-            self._data = json.load(file)
 
 
 
@@ -82,6 +66,21 @@ class LocalizationManager:
             str: The localized string from the json file.
         '''
         return self._data[key]
+
+
+
+    def refresh(self) -> None:
+        '''Load localization files from specified folder.
+
+        This is useful if the localization files have been updated on runtime.
+        
+        Called when updating the language.
+        '''
+
+        # Load the localization file
+        self._data = {}
+        with open(f"{self.folder_path}/{self.language}.json", "r") as file:
+            self._data = json.load(file)
 
 
 
