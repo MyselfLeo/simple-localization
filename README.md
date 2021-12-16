@@ -44,3 +44,6 @@ Hello !
 >>> localization['GREETINGS']
 Bonjour !
 ```
+
+## Links
+- [Documentation](https://myselfleo.com/simple-localization/docs/)
