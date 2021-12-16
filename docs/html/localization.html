@@ -41,6 +41,7 @@ class LocalizationManager:
 
     Methods:
         change_language(language: str) -&gt; None: Update the data for specified language.
+        refresh() -&gt; None: Load localization files from specified folder.
     &#39;&#39;&#39;
 
     def __init__(self, folder_path: str, language: str) -&gt; None:
@@ -157,7 +158,8 @@ class LocalizationManager:
 <dd>Current language.</dd>
 </dl>
 <h2 id="methods">Methods</h2>
-<p>change_language(language: str) -&gt; None: Update the data for specified language.</p></div>
+<p>change_language(language: str) -&gt; None: Update the data for specified language.
+refresh() -&gt; None: Load localization files from specified folder.</p></div>
 <details class="source">
 <summary>
 <span>Expand source code</span>
@@ -174,6 +176,7 @@ class LocalizationManager:
 
     Methods:
         change_language(language: str) -&gt; None: Update the data for specified language.
+        refresh() -&gt; None: Load localization files from specified folder.
     &#39;&#39;&#39;
 
     def __init__(self, folder_path: str, language: str) -&gt; None:

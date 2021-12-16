@@ -10,10 +10,6 @@ class LocalizationManager:
         folder_path (str): Path to the folder containing the localization files.
         available_languages (list[str]): List of available languages. Loaded when calling load().
         language (str): Current language.
-
-    Methods:
-        change_language(language: str) -> None: Update the data for specified language.
-        refresh() -> None: Load localization files from specified folder.
     '''
 
     def __init__(self, folder_path: str, language: str) -> None:
