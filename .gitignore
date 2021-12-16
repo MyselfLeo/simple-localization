@@ -2,5 +2,3 @@ dist/
 __pycache__/
 pyproject.toml
 setup.cfg
-1pyproject.toml
-1setup.cfg
