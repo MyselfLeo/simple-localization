@@ -46,7 +46,7 @@ class LocalizationManager:
     def __init__(self, folder_path: str, language: str) -&gt; None:
         self.folder_path = folder_path
         self.available_languages = []
-        self.language = language 
+        self.language = language
 
         self._data = {} # Parsed localization file
 
@@ -64,19 +64,6 @@ class LocalizationManager:
         for file in os.listdir(self.folder_path):
             if file.endswith(&#34;.json&#34;):
                 self.available_languages.append(file[:-5])
-
-
-
-    def _load(self) -&gt; None:
-        &#39;&#39;&#39;Load localization files from specified folder.
-        
-        Called when updating the language.
-        &#39;&#39;&#39;
-
-        # Load the localization file
-        self._data = {}
-        with open(f&#34;{self.folder_path}/{self.language}.json&#34;, &#34;r&#34;) as file:
-            self._data = json.load(file)
 
 
 
@@ -110,6 +97,21 @@ class LocalizationManager:
             str: The localized string from the json file.
         &#39;&#39;&#39;
         return self._data[key]
+
+
+
+    def refresh(self) -&gt; None:
+        &#39;&#39;&#39;Load localization files from specified folder.
+
+        This is useful if the localization files have been updated on runtime.
+        
+        Called when updating the language.
+        &#39;&#39;&#39;
+
+        # Load the localization file
+        self._data = {}
+        with open(f&#34;{self.folder_path}/{self.language}.json&#34;, &#34;r&#34;) as file:
+            self._data = json.load(file)
 
 
 
@@ -177,7 +179,7 @@ class LocalizationManager:
     def __init__(self, folder_path: str, language: str) -&gt; None:
         self.folder_path = folder_path
         self.available_languages = []
-        self.language = language 
+        self.language = language
 
         self._data = {} # Parsed localization file
 
@@ -195,19 +197,6 @@ class LocalizationManager:
         for file in os.listdir(self.folder_path):
             if file.endswith(&#34;.json&#34;):
                 self.available_languages.append(file[:-5])
-
-
-
-    def _load(self) -&gt; None:
-        &#39;&#39;&#39;Load localization files from specified folder.
-        
-        Called when updating the language.
-        &#39;&#39;&#39;
-
-        # Load the localization file
-        self._data = {}
-        with open(f&#34;{self.folder_path}/{self.language}.json&#34;, &#34;r&#34;) as file:
-            self._data = json.load(file)
 
 
 
@@ -241,6 +230,21 @@ class LocalizationManager:
             str: The localized string from the json file.
         &#39;&#39;&#39;
         return self._data[key]
+
+
+
+    def refresh(self) -&gt; None:
+        &#39;&#39;&#39;Load localization files from specified folder.
+
+        This is useful if the localization files have been updated on runtime.
+        
+        Called when updating the language.
+        &#39;&#39;&#39;
+
+        # Load the localization file
+        self._data = {}
+        with open(f&#34;{self.folder_path}/{self.language}.json&#34;, &#34;r&#34;) as file:
+            self._data = json.load(file)
 
 
 
@@ -291,6 +295,31 @@ class LocalizationManager:
     self._load()</code></pre>
 </details>
 </dd>
+<dt id="localization.LocalizationManager.refresh"><code class="name flex">
+<span>def <span class="ident">refresh</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Load localization files from specified folder.</p>
+<p>This is useful if the localization files have been updated on runtime.</p>
+<p>Called when updating the language.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def refresh(self) -&gt; None:
+    &#39;&#39;&#39;Load localization files from specified folder.
+
+    This is useful if the localization files have been updated on runtime.
+    
+    Called when updating the language.
+    &#39;&#39;&#39;
+
+    # Load the localization file
+    self._data = {}
+    with open(f&#34;{self.folder_path}/{self.language}.json&#34;, &#34;r&#34;) as file:
+        self._data = json.load(file)</code></pre>
+</details>
+</dd>
 </dl>
 </dd>
 </dl>
@@ -308,6 +337,7 @@ class LocalizationManager:
 <h4><code><a title="localization.LocalizationManager" href="#localization.LocalizationManager">LocalizationManager</a></code></h4>
 <ul class="">
 <li><code><a title="localization.LocalizationManager.change_language" href="#localization.LocalizationManager.change_language">change_language</a></code></li>
+<li><code><a title="localization.LocalizationManager.refresh" href="#localization.LocalizationManager.refresh">refresh</a></code></li>
 </ul>
 </li>
 </ul>

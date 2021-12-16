@@ -13,6 +13,7 @@ class LocalizationManager:
 
     Methods:
         change_language(language: str) -> None: Update the data for specified language.
+        refresh() -> None: Load localization files from specified folder.
     '''
 
     def __init__(self, folder_path: str, language: str) -> None:
