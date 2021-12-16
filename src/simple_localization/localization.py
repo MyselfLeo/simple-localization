@@ -97,4 +97,4 @@ class LocalizationManager:
 
         # Update the language
         self.language = language
-        self._load()
+        self.refresh()
