@@ -3,12 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to simple-localization's documentation!
+**package** simple-localization
 ===============================================
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
 
 .. include:: simple_localization.rst
