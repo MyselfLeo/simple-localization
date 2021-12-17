@@ -11,10 +11,4 @@ Welcome to simple-localization's documentation!
    :caption: Contents:
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. include:: simple_localization.rst
