@@ -1,8 +1,5 @@
-simple\_localization package
+simple\_localization **package**
 ============================
-
-Submodules
-----------
 
 simple\_localization.localization module
 ----------------------------------------
