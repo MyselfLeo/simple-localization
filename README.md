@@ -46,4 +46,4 @@ Bonjour !
 ```
 
 ## Links
-- [Documentation](https://myselfleo.com/simple-localization/docs/)
+- [Documentation](https://simple-localization.readthedocs.io/en/latest/)
